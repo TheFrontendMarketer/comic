@@ -1,0 +1,27 @@
+---
+const navItems = [
+  { path: "/about", label: "About" },
+  { path: "/services", label: "Services" },
+  { path: "/contact", label: "Contact" },
+];
+---
+
+<header class="bg-gray-100">
+  <nav
+    class="container mx-auto flex items-center justify-between py-4 px-6"
+    aria-label="Main navigation"
+  >
+    <a href="/" class="text-lg font-bold">[Your Site Name]</a>
+    <ul class="flex gap-6">
+      {
+        navItems.map((item) => (
+          <li>
+            <a href={item.path} class="text-gray-700 hover:text-blue-500">
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
