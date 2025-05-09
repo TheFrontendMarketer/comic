@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('/fonts/poppins-regular.woff2') format('woff2');
-  }
-  
-  @font-face {
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/poppins-bold.woff2') format('woff2');
+    src: url('/fonts/poppins-v23-latin-700.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/poppins-v23-latin-regular.woff2') format('woff2');
   }
   
   body {
