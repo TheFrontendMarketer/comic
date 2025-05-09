@@ -1,35 +1,29 @@
 ---
 import Layout from "../layouts/default.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <Navbar />
-  <main id="main-content" class="container mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold mb-4">Welcome to [Your Site Name]</h1>
-    <p class="mb-8 text-lg">
-      We help [your audience] with [your service/product] — built with
-      performance, accessibility, and clarity in mind.
+  <h1 class="text-4xl font-bold mb-4">Welcome to [Your Site Name]</h1>
+  <p class="mb-8 text-lg">
+    We help [your audience] with [your service/product] — built with
+    performance, accessibility, and clarity in mind.
+  </p>
+
+  <section aria-labelledby="services-heading" class="mb-12">
+    <h2 id="services-heading" class="text-2xl font-semibold mb-2">
+      Our Services
+    </h2>
+    <ul class="list-disc pl-5 space-y-2">
+      <li><strong>Service 1</strong>: Short description of what it is.</li>
+      <li><strong>Service 2</strong>: Another short, helpful blurb.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="about-heading">
+    <h2 id="about-heading" class="text-2xl font-semibold mb-2">About Us</h2>
+    <p>
+      Learn more about our team and our mission to make the web more accessible
+      and effective.
     </p>
-
-    <section aria-labelledby="services-heading" class="mb-12">
-      <h2 id="services-heading" class="text-2xl font-semibold mb-2">
-        Our Services
-      </h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Service 1</strong>: Short description of what it is.</li>
-        <li><strong>Service 2</strong>: Another short, helpful blurb.</li>
-      </ul>
-    </section>
-
-    <section aria-labelledby="about-heading">
-      <h2 id="about-heading" class="text-2xl font-semibold mb-2">About Us</h2>
-      <p>
-        Learn more about our team and our mission to make the web more
-        accessible and effective.
-      </p>
-    </section>
-  </main>
-  <Footer />
+  </section>
 </Layout>
