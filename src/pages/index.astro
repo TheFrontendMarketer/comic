@@ -1,29 +1,246 @@
 ---
 import Layout from "../layouts/default.astro";
+import "../styles/global.css";
+import EventCard from "../components/EventCard.astro";
+import BlogCard from "../components/BlogCard.astro";
+import Newsletter from "../components/Newsletter.astro";
+
+import { CldImage } from "astro-cloudinary";
 ---
 
 <Layout>
-  <h1 class="text-4xl font-bold mb-4">Welcome to [Your Site Name]</h1>
-  <p class="mb-8 text-lg">
-    We help [your audience] with [your service/product] — built with
-    performance, accessibility, and clarity in mind.
-  </p>
+  <!-- HERO SECTION -->
+  <section class="relative">
+    <!-- Background Image -->
+    <CldImage
+      src="pexels-introspectivedsgn-6654177_1_egmrlk"
+      alt="Comic book background"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+    />
 
-  <section aria-labelledby="services-heading" class="mb-12">
-    <h2 id="services-heading" class="text-2xl font-semibold mb-2">
-      Our Services
-    </h2>
-    <ul class="list-disc pl-5 space-y-2">
-      <li><strong>Service 1</strong>: Short description of what it is.</li>
-      <li><strong>Service 2</strong>: Another short, helpful blurb.</li>
-    </ul>
+    <!-- Overlay for darkening image -->
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-20 isolate px-6 pt-14 lg:px-8 text-white">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div
+            class="relative rounded-full px-3 py-1 text-sm/6 bg-white/80 text-gray-800 ring-1 ring-white hover:ring-gray-300"
+          >
+            Join our newsletter.
+            <a href="#" class="font-semibold text-indigo-600">
+              <span class="absolute inset-0" aria-hidden="true"></span>
+              Sign up here <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h1 class="text-5xl font-bold tracking-tight sm:text-7xl">
+            Built by Fans. Curated for Collectors.
+          </h1>
+          <p class="mt-8 text-lg font-medium sm:text-xl/8 text-white/80">
+            For collectors, fans, and the comic obsessed. We're building a
+            platform to help you discover, collect, and trade your favorite
+            comics. Join our community of comic book lovers today!
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500"
+              >Get started</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section aria-labelledby="about-heading">
-    <h2 id="about-heading" class="text-2xl font-semibold mb-2">About Us</h2>
-    <p>
-      Learn more about our team and our mission to make the web more accessible
-      and effective.
-    </p>
+  <!-- INTRO SECTION -->
+  <section class="siteContainer text-center">
+    <div class="mt-50 mb-30">
+      <h1
+        class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl mb-10"
+      >
+        We're a local comic book store and hub for collectors
+      </h1>
+      <p>
+        Step into a world of heroes, villains, and unforgettable stories. At
+        [Your Store Name], we specialize in new releases, rare finds, back
+        issues, and everything in between. Whether you’re hunting for a vintage
+        key issue or diving into a new series, our passion for comics powers
+        everything we do.
+        <br /><br />
+        As a locally owned shop, we're proud to serve our community of collectors
+        and fans right here in [Your City/Neighborhood]. Swing by, talk comics, and
+        discover your next favorite story.
+      </p>
+    </div>
+  </section>
+
+  <section class="overflow-hidden bg-white py-24 sm:py-32">
+    <div class="siteContainer">
+      <div
+        class="mx-auto flex max-w-2xl flex-col-reverse gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:gap-x-16"
+      >
+        <!-- Text Content -->
+        <div class="lg:pt-4 lg:pr-8 flex-1">
+          <div class="lg:max-w-lg">
+            <h2 class="text-base font-semibold leading-7 text-indigo-600">
+              Visit us today
+            </h2>
+            <p
+              class="mt-2 text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl"
+            >
+              Your local shop for all things comics
+            </p>
+            <p class="mt-6 text-lg leading-8 text-gray-600">
+              Step into a shop built for fans. Whether you're a lifelong
+              collector or just starting out, our shelves are packed with
+              stories waiting to be discovered — from iconic titles to fresh new
+              releases.
+            </p>
+            <dl
+              class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none"
+            >
+              <div class="relative md:pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  🦸‍♂️ New comics every week.
+                </dt>
+                <dd class="inline">
+                  Stay up to date with the latest from Marvel, DC, Image, and
+                  beyond. Swing by each Wednesday for new releases and staff
+                  picks.
+                </dd>
+              </div>
+              <div class="relative md:pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  🎉 In-store exclusives & events.
+                </dt>
+                <dd class="inline">
+                  We host signings, fan meetups, and launch parties — plus
+                  exclusive items you won’t find anywhere else.
+                </dd>
+              </div>
+              <div class="relative md:pl-9">
+                <dt class="inline font-semibold text-gray-900">
+                  🛍️ Support a small business.
+                </dt>
+                <dd class="inline">
+                  When you shop with us, you're backing a locally owned store
+                  run by real fans. Your support helps keep comic culture
+                  thriving in our community.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- Image -->
+        <div class="flex-1">
+          <CldImage
+            src="pexels-nerdcinema-20085947_jaqegh"
+            width={1280}
+            height={1705}
+            alt="Comic book background"
+            class="w-full h-auto object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALENDAR SECTION-->
+
+  <section class="relative z-10 overflow-hidden px-4 py-12 md:py-16">
+    <div
+      class="mx-auto flex max-w-7xl flex-col justify-center md:flex-row md:items-stretch"
+    >
+      <!-- Events -->
+      <div
+        class="w-full flex flex-col items-center gap-10 bg-gray-100 px-4 py-10 sm:px-6 md:px-8 md:py-12 md:w-[55%]"
+      >
+        <div class="w-full flex flex-col items-start text-left">
+          <span
+            class="text-sm font-semibold uppercase tracking-wide text-indigo-600"
+            >Our Events</span
+          >
+          <h2 class="text-3xl font-bold text-gray-900">Upcoming Events</h2>
+        </div>
+
+        <ul class="flex w-full flex-col gap-6">
+          <!-- First Event -->
+          <EventCard
+            day="26"
+            month="July"
+            title="Meet the Creators: Local Artist Signing"
+            location="Philadelphia, PA 19130"
+            time="1 p.m. – 2 p.m."
+          />
+
+          <!-- Second Event -->
+          <EventCard
+            day="19"
+            month="July"
+            title="Superhero Saturday: Costume Contest & Trivia Throwdown"
+            location="Philadelphia, PA 19130"
+            time="1 p.m. – 5 p.m."
+          />
+          <!-- Third Event -->
+          <EventCard
+            day="12"
+            month="July"
+            title="Creator Spotlight: Live Drawing & Signing with Local Artist"
+            location="Philadelphia, PA 19130"
+            time="1 p.m. – 5 p.m."
+          />
+          <!-- Fourth Event -->
+          <EventCard
+            day="5"
+            month="July"
+            title="Family Comic Day & Kids' Activities"
+            location="Philadelphia, PA 19130"
+            time="1 p.m. – 5 p.m."
+          />
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog-1347" class="relative z-10 overflow-hidden px-4 py-24">
+    <div class="mx-auto flex max-w-7xl flex-col items-center gap-16">
+      <!-- Header -->
+      <div class="w-full flex flex-col items-center text-center">
+        <span class="text-indigo-600 font-semibold">Our Blog</span>
+        <h2 class="text-3xl sm:text-4xl font-bold max-w-[20ch]">
+          Panels & Punchlines
+        </h2>
+      </div>
+      <div
+        class="siteContainer grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        <BlogCard
+          date="July 26, 2023"
+          title="Comic Book Collecting 101: Tips for New Collectors"
+          img="https://res.cloudinary.com/dhytwf10i/image/upload/v1747318396/Untitled_design_49_il39ff.png"
+        />
+        <BlogCard
+          date="July 26, 2023"
+          title="Top 5 Comic Book Series to Read This Summer"
+          img="https://res.cloudinary.com/dhytwf10i/image/upload/v1747319151/xmen_blog_bfmlmh.png"
+        />
+        <BlogCard
+          date="July 26, 2023"
+          title="New Arrivals: This Week's Must-Read Comics"
+          img="https://res.cloudinary.com/dhytwf10i/image/upload/v1747319284/Untitled_design_50_lx6qxw.png"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <Newsletter />
+    </div>
   </section>
 </Layout>
